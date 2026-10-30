@@ -26,6 +26,8 @@ def sumar(valores):
 """
     score_J = similitud_jaccard(secuencia_de(codigo_a), secuencia_de(codigo_b))
     score_L = similitud_levenshtein(secuencia_de(codigo_a), secuencia_de(codigo_b))
+    print("score Jaccard - Test 1:", score_J)
+    print("score Levenshtein - Test 1:", score_L)
     assert score_J >= UMBRAL_DUPLICADO
     assert score_L >= UMBRAL_DUPLICADO
 
@@ -49,7 +51,10 @@ def calcular_media(valores):
         total += v
     return total / cantidad
 """
+    score_J = similitud_jaccard(secuencia_de(codigo_a), secuencia_de(codigo_b))
     score_L = similitud_levenshtein(secuencia_de(codigo_a), secuencia_de(codigo_b))
+    print("score Jaccard - Test 2:", score_J)
+    print("score Levenshtein - Test 2:", score_L)
     assert score_L >= UMBRAL_DUPLICADO
 
 #TEST 3 NEGATIVO: Funciones diferentes 1
@@ -69,6 +74,7 @@ def saludar(nombre):
         print("Hola " + nombre + ":D")
 """
     score = similitud_jaccard(secuencia_de(codigo_a), secuencia_de(codigo_b))
+    print("score Jaccard - Test 3:", score)
     assert score < UMBRAL_DUPLICADO
 
 #TEST 4 NEGATIVO: Funciones diferentes 2
@@ -90,6 +96,7 @@ def procesar(datos):
     return resultado
 """
     score = similitud_jaccard(secuencia_de(codigo_a), secuencia_de(codigo_b))
+    print("score Jaccard - Test 4:", score)
     assert score < UMBRAL_DUPLICADO
 
 
@@ -121,6 +128,8 @@ def calcular_desvio(valores):
 """
     score_J = similitud_jaccard(secuencia_de(codigo_a), secuencia_de(codigo_b))
     score_L = similitud_levenshtein(secuencia_de(codigo_a), secuencia_de(codigo_b))
+    print("score Jaccard - Test 5:", score_J)
+    print("score Levenshtein - Test 5:", score_L)
     assert score_J >= UMBRAL_DUPLICADO
     assert score_L >= UMBRAL_DUPLICADO
 
@@ -147,4 +156,5 @@ def busqueda_binaria(lista, objetivo):
     return -1
 """
     score = similitud_jaccard(secuencia_de(codigo_a), secuencia_de(codigo_b))
+    print("score Jaccard - Test 6:", score)
     assert score < UMBRAL_DUPLICADO
