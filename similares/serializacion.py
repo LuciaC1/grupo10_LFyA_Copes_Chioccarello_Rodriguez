@@ -1,8 +1,7 @@
 import ast
 from typing import List
 
-from normalizacion import normalizar_ast
-
+from similares.normalizacion import normalizar_ast
 
 def serializar_preorder(nodo: ast.AST) -> List[str]:
     secuencia: List[str] = []

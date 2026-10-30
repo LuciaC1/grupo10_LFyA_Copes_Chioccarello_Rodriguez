@@ -1,11 +1,11 @@
 import argparse
 import os
-import sys
+import sys  
 from typing import List, Tuple
 
-from src.extraccion import FuncionExtraida, extraer_funciones_directorio
-from src.normalizacion import obtener_secuencia_funcion
-from src.similitud import (
+from similares.extraccion import FuncionExtraida, extraer_funciones_directorio
+from similares.serializacion import obtener_secuencia_funcion
+from similares.similitud import (
     UMBRAL_DUPLICADO,
     es_candidata_duplicado,
     similitud_jaccard,
